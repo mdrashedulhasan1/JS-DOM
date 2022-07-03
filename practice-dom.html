@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background-style">
+        <h1 id="first">First</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt unde exercitationem, minima harum saepe optio dolorum quis hic aspernatur maiores.</p>
+    </div>
+    <div class="background-style">
+        <h1 id="second">Second</h1>
+        <p>Dolor sit amet consectetur adipisicing elit. Veritatis repellat necessitatibus, laboriosam molestias ipsam aut corporis fugiat earum aliquid temporibus.</p>
+    </div>
+    <div class="background-style">
+        <h1 id="third">Third</h1>
+        <p>Sit amet consectetur adipisicing elit. Eveniet ipsum doloribus dignissimos, ab consectetur aliquam molestias animi. Sunt, eius veritatis!</p>
+    </div>
+    <script>
+        // getElementsByTagName
+        const heading = document.getElementsByTagName('h1');
+        for(const h1 of heading){
+            h1.style.textAlign = 'center';
+            h1.style.fontWeight = '400';
+            h1.style.fontFamily = 'verdana';
+        }
+        // document.getElementById
+        document.getElementById('first').style.color = 'red';
+        document.getElementById('second').style.color = 'goldenrod';
+        document.getElementById('third').style.color = 'blue';
+
+        // getElementsByClassName
+        const backgoundWork = document.getElementsByClassName('background-style');
+        for(const backgoundStyle of backgoundWork){
+            backgoundStyle.style.backgroundColor = 'gray';
+            backgoundStyle.style.padding = '15px';
+            backgoundStyle.style.margin = '10px 20px';
+        }
+
+        // querySelector
+        document.querySelector('.background-style p').style.color = 'gold';
+
+        // querySelectorAll
+        const paraWeight = document.querySelectorAll('.background-style p');
+        for(const paragraphWeight of paraWeight){
+            paragraphWeight.style.fontWeight = '700';
+        }
+    </script>
+</body>
+</html>
